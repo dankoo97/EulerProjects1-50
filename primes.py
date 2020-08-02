@@ -20,3 +20,21 @@ def find_primes_less_than(x):
         return primes
 
 
+def xth_prime(x):
+    if x == 1:
+        return 2
+    if x == 2:
+        return 3
+
+    primes = [2, 3]
+    i = 5
+
+    while len(primes) < x:
+        for p in primes:
+            if i % p == 0:
+                break
+        else:
+            primes.append(i)
+        i += 2
+
+    return primes[-1]
