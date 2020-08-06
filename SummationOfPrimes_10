@@ -1,0 +1,5 @@
+from primes import find_primes_less_than
+
+less_than_2_mil = find_primes_less_than(2000000)
+
+print(sum(less_than_2_mil))  # 142913828922
