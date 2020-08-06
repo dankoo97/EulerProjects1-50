@@ -14,4 +14,4 @@ for i in fib:
     if i % 2 == 0:
         c += i
 
-print(c)
+print(c)  # 4613732
