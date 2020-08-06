@@ -18,4 +18,4 @@ def sum_of_squares(x):
     return n
 
 
-print(square_of_sums(100) - sum_of_squares(100))
+print(square_of_sums(100) - sum_of_squares(100))  # 25164150
