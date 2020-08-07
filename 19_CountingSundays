@@ -1,0 +1,31 @@
+# You are given the following information, but you may prefer to do some research for yourself.
+#
+# 1 Jan 1900 was a Monday.
+# Thirty days has September,
+# April, June and November.
+# All the rest have thirty-one,
+# Saving February alone,
+# Which has twenty-eight, rain or shine.
+# And on leap years, twenty-nine.
+# A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.
+# How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
+
+# A dict to keep track of how many days are in a month
+month = {1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
+
+first_of_month_sunday = 0  # our counter
+day_of_week = 2  # January 1 1901 was a Tuesday
+
+for i in range(1901, 2001):
+    for j in range(1, 13):
+
+        if j == 2 and i % 4 == 0:  # checks for leap days, although the result for this period is the same without it
+            if i % 100 != 0 or i % 400 == 0:  # This always returns true for 1901 - 2000
+                day_of_week += 1
+
+        day_of_week = (month[j] + day_of_week) % 7  # init day number + number of days since % 7 tells us the day of the week
+
+        if day_of_week == 0:
+            first_of_month_sunday += 1
+
+print(first_of_month_sunday)  # 171
