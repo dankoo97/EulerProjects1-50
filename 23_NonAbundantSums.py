@@ -31,4 +31,4 @@ for index, bottom_num in enumerate(abundant_numbers):
 
 sums = [i for i in range(1, max_int) if possible_sums[i]]  # turning our bool list into numbers
 # print(*sums, sep='\n')
-print(sum(sums))
+print(sum(sums))  # 4179871
