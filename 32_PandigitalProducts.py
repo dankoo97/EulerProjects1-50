@@ -8,9 +8,7 @@
 # 
 # HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.
 
-def is_n_pandigital(x):
-    return all(x.count(str(digit)) == 1 for digit in range(1, 10)) and '0' not in x
-
+from pandigital import is_pandigital
 
 def is_mmp_pandigital(multiplicand, multiplier):
     product = multiplicand * multiplier
