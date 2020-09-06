@@ -7,11 +7,9 @@ paths = {'2,2': 6}  # Cache for found paths
 
 def lattice_path(x, y):
     for i in range(2):
-        try:
-            if str(x)+","+str(y) in paths:
-                return paths[str(x) + ',' + str(y)]  # check if we already did the work for this size lattice
-        except KeyError:
-            x, y = y, x  # flip the digits because the outcome is the same and it halves the calculations
+        if str(x)+","+str(y) in paths:
+            return paths[str(x) + ',' + str(y)]  # check if we already did the work for this size lattice
+        x, y = y, x  # flip the digits because the outcome is the same and it halves the calculations
 
     if x == 1 or y == 1:
         paths[str(x) + ',' + str(y)] = x + y  # a 1xX lattice will always have X + 1 paths available
