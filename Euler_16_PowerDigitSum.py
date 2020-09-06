@@ -2,6 +2,6 @@
 #
 # What is the sum of the digits of the number 2 ** 1000?
 
-print(sum(list(int(digit) for digit in str(2 ** 1000))))  # 1366
+print(sum(int(digit) for digit in str(2 ** 1000)))  # 1366
 
 # We sum all of the digits. Python does this quick and easy, no tricks needed
