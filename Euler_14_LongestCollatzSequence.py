@@ -14,11 +14,10 @@
 
 
 def create_path(x):
-    try:
-        if chains[x] in chains:  # We check our dict if we already found the length of x
-            return chains[x]
-    except KeyError:
-        pass
+    
+    if x in chains:  # We check our dict if we already found the length of x
+        return chains[x]
+
 
     if x % 2 == 0:
         chains[x] = 1 + create_path(x // 2)  # Even collatz
