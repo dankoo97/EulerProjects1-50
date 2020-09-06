@@ -10,7 +10,6 @@ def largest_factor(x):
     while not (x in possible):
         if x % possible[i] == 0:
             x = int(x / possible[i])
-            print(x, possible[i])
         else:
             i += 1
     return x
